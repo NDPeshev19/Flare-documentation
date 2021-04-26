@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+      FireTruckManager - Documentation
+  </title>
+
+  <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  
+  <link type="text/css" rel="stylesheet" href="styles/collapse.css">
+  
+
+  
+
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+  mixpanel.init("1919205b2da72e4da3b9b6639b444d59");</script>
+  <!-- end Mixpanel -->
+</head>
+
+<body>
+  <svg style="display: none;">
+    <defs>
+      <symbol id="linkIcon" fill="#706d77" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" class="navicon-button x">
+    <div class="navicon"></div>
+  </label>
+
+  <label for="nav-trigger" class="overlay"></label>
+
+  <div class="top-nav-wrapper">
+    <ul>
+      <li >
+        <a href="index.html">
+          
+            <svg fill="#6D6D6D" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          
+          
+        </a>
+      </li>
+
+      
+
+    </ul>
+  </div>
+
+  <nav>
+    <h3 class="reference-title">
+      Flare
+    </h3>
+
+    
+
+      
+    
+
+    <h3>Classes</h3><ul><li id="AccountManager-nav"><a href="AccountManager.html">AccountManager</a><ul class='methods'><li data-type="method" id="AccountManager-login-nav"><a href="AccountManager.html#login">login</a></li></ul></li><li id="FireEventsManager-nav"><a href="FireEventsManager.html">FireEventsManager</a><ul class='methods'><li data-type="method" id="FireEventsManager-addNewFireEvent-nav"><a href="FireEventsManager.html#addNewFireEvent">addNewFireEvent</a></li><li data-type="method" id="FireEventsManager-finishOperationOnFireEvent-nav"><a href="FireEventsManager.html#finishOperationOnFireEvent">finishOperationOnFireEvent</a></li><li data-type="method" id="FireEventsManager-getFireEventByID-nav"><a href="FireEventsManager.html#getFireEventByID">getFireEventByID</a></li><li data-type="method" id="FireEventsManager-getFireEventsByState-nav"><a href="FireEventsManager.html#getFireEventsByState">getFireEventsByState</a></li><li data-type="method" id="FireEventsManager-rejectFireEvent-nav"><a href="FireEventsManager.html#rejectFireEvent">rejectFireEvent</a></li><li data-type="method" id="FireEventsManager-startOperationOnFireEvent-nav"><a href="FireEventsManager.html#startOperationOnFireEvent">startOperationOnFireEvent</a></li><li data-type="method" id="FireEventsManager-validateFireEvent-nav"><a href="FireEventsManager.html#validateFireEvent">validateFireEvent</a></li></ul></li><li id="FireTruck-nav"><a href="FireTruck.html">FireTruck</a><ul class='methods'><li data-type="method" id="FireTruck-validateLicencePlate-nav"><a href="FireTruck.html#.validateLicencePlate">validateLicencePlate</a></li><li data-type="method" id="FireTruck-changeAvailability-nav"><a href="FireTruck.html#changeAvailability">changeAvailability</a></li></ul></li><li id="FireTruckManager-nav"><a href="FireTruckManager.html">FireTruckManager</a><ul class='methods'><li data-type="method" id="FireTruckManager-addNewFireTruck-nav"><a href="FireTruckManager.html#addNewFireTruck">addNewFireTruck</a></li><li data-type="method" id="FireTruckManager-getFireTruckByLicencePlate-nav"><a href="FireTruckManager.html#getFireTruckByLicencePlate">getFireTruckByLicencePlate</a></li><li data-type="method" id="FireTruckManager-removeFireTruck-nav"><a href="FireTruckManager.html#removeFireTruck">removeFireTruck</a></li></ul></li><li id="FireWorker-nav"><a href="FireWorker.html">FireWorker</a><ul class='methods'><li data-type="method" id="FireWorker-changeAvailability-nav"><a href="FireWorker.html#changeAvailability">changeAvailability</a></li></ul></li><li id="WorkerManager-nav"><a href="WorkerManager.html">WorkerManager</a><ul class='methods'><li data-type="method" id="WorkerManager-addNewWorker-nav"><a href="WorkerManager.html#addNewWorker">addNewWorker</a></li><li data-type="method" id="WorkerManager-getAllWorkersByRole-nav"><a href="WorkerManager.html#getAllWorkersByRole">getAllWorkersByRole</a></li><li data-type="method" id="WorkerManager-getWorkerByID-nav"><a href="WorkerManager.html#getWorkerByID">getWorkerByID</a></li><li data-type="method" id="WorkerManager-removeWorker-nav"><a href="WorkerManager.html#removeWorker">removeWorker</a></li></ul></li></ul>
+  </nav>
+
+  <div id="main">
+    
+      <h1 class="page-title">
+        FireTruckManager
+      </h1>
+    
+
+    
+
+<section>
+  <header>
+    
+      <h2>
+        
+        FireTruckManager
+        
+      </h2>
+
+      
+        <div class="class-description">
+          <p>Class representing a manager for the FireTrucks.</p>
+        </div>
+      
+    
+  </header>
+
+  <article>
+    <div class="container-overview">
+      
+        
+
+
+  
+    <h2>Constructor</h2>
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#FireTruckManager">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="FireTruckManager">
+      <span class="type-signature"></span>new FireTruckManager<span class="signature">()</span><span class="type-signature"></span>
+    </h4>
+  </span>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="index.js.html">index.js</a>, <a href="index.js.html#line108">line 108</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+      <h3 class="subsection-title">Methods</h3>
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#addNewFireTruck">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="addNewFireTruck">
+      <span class="type-signature"></span>addNewFireTruck<span class="signature">(fireTruck)</span><span class="type-signature"> &rarr; {<a href="FireTruck.html">FireTruck</a>}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Adds a new FireTruck instance to the list of fireTrucks.</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>fireTruck</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      <a href="FireTruck.html">FireTruck</a>
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="index.js.html">index.js</a>, <a href="index.js.html#line168">line 168</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#getFireTruckByLicencePlate">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="getFireTruckByLicencePlate">
+      <span class="type-signature"></span>getFireTruckByLicencePlate<span class="signature">(licencePlate)</span><span class="type-signature"> &rarr; {<a href="FireTruck.html">FireTruck</a>}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Returns a FireTruck with the specified licence plate.</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>licencePlate</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="index.js.html">index.js</a>, <a href="index.js.html#line187">line 187</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#removeFireTruck">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="removeFireTruck">
+      <span class="type-signature"></span>removeFireTruck<span class="signature">(licencePlate)</span><span class="type-signature"></span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>A fucntion to remvoe a FireTruck from the list.
+The FireTruck must not be currently in use for it to be removed.</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>licencePlate</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="index.js.html">index.js</a>, <a href="index.js.html#line204">line 204</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    
+
+    
+
+    
+  </article>
+</section>
+
+
+
+
+  </div>
+
+  <br class="clear">
+
+  <footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a>
+  </footer>
+
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/pagelocation.js"></script>
+
+  
+
+</body>
+</html>
